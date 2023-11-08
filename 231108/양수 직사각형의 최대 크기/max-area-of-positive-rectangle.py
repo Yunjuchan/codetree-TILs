@@ -13,19 +13,20 @@ for i in range(n) :
         dp2[i+1][j+1] = dp2[i+1][j]+1
         t_y = dp1[i+1][j+1]
         t_x = dp2[i+1][j+1]
-        
         for x in range(j+1, 0, -1) :
             if t_y > dp1[i+1][x] :
                 t_y = dp1[i+1][x]
             if t_y == 0 : break
             if Max < t_y * (j-x+2) :
                 Max = t_y * (j-x+2)
-                
+
         for y in range(i+1, 0, -1) :
             if t_x > dp2[y][j+1] :
                 t_x = dp2[y][j+1]
             if t_x == 0 : break
             if Max < t_x * (i-y+2) :
                 Max = t_x * (i-y+2)
-
-print(Max)
+if Max == 0 :
+    print(-1)
+else :
+    print(Max)
