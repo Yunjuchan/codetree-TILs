@@ -13,6 +13,7 @@ for i in range(n) :
         dp2[i+1][j+1] = dp2[i+1][j]+1
         t_y = dp1[i+1][j+1]
         t_x = dp2[i+1][j+1]
+        
         for x in range(j+1, 0, -1) :
             if t_y > dp1[i+1][x] :
                 t_y = dp1[i+1][x]
