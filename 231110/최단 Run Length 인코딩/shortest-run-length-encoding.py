@@ -1,7 +1,10 @@
 word = input()
-while word[0] == word[-1] :
-    word = word[-1] + word[:-1]
 N = len(word)
+i = 0
+while i < N :
+    if word[0] != word[-1] : break
+    word = word[-1] + word[:-1]
+    i += 1
 cnt = 1
 result = 0
 for i in range(N-1) :
@@ -9,4 +12,5 @@ for i in range(N-1) :
         result += len(str(cnt))+1
         cnt = 1
     else : cnt += 1
-print(result+cnt+1)
+result += len(str(cnt))+1
+print(result)
