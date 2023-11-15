@@ -1,1 +1,2 @@
-print(*[input(),input()][::-1], sep='\n')
+a, b = input(), input()
+print(b, a, sep='\n')
