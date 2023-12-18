@@ -6,16 +6,15 @@ def dfs(direction, y, x) :
         level += 1
         if y < 0 or x < 0 or y >= N or x >= N : 
             return level
-        if arr[y][x] == 1 :
-            direction += 1
-        elif arr[y][x] == 2 :
-            direction -= 1
+        if arr[y][x] :
+            if (arr[y][x] + direction) % 2 == 1 :  
+                direction -= 1
+            elif (arr[y][x] + direction) % 2 == 0 :
+                direction += 1
         if direction < 0 or direction >= 4 :
             direction %= 4
         y += direct_y[direction]
         x += direct_x[direction]
-
-
 
 
 N = int(input())
