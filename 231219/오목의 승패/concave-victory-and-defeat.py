@@ -27,8 +27,7 @@ for i in range(19) :
         if arr[i][j] :
             ret = check(i, j, arr[i][j])
             if ret : result = [arr[i][j], i+1, j+1]
-        if result : break
-    if result : break
+
 
 if result :
     print(result[0])
