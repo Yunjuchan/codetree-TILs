@@ -3,7 +3,7 @@ def check(y, x, tp) :
     for i in range(3) :
         level = 1
         dy, dx = y, x
-        if arr[y][x] == arr[y-direct_y[i]][x-direct_x[i]] :
+        if y-direct_y[i] >= 0 and x-direct_x[i] >= 0 and arr[y][x] == arr[y-direct_y[i]][x-direct_x[i]] :
             continue
         while True :
             dy += direct_y[i]
