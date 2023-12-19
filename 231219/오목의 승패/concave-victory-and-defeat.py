@@ -18,16 +18,17 @@ result = False
 direct_y = [1,0,1]
 direct_x = [0,1,1]
 arr = [list(map(int, input().split())) for _ in range(19)]
+
 for i in range(19) :
     for j in range(19) :
         if arr[i][j] :
             ret = check(i, j, arr[i][j])
-            result = [i+1, j+1, arr[i][j]]
+            result = [arr[i][j], i+1, j+1]
         if result : break
     if result : break
 # print(result)
 if result :
-    print(result[2])
-    print(*result[:2])
+    print(result[0])
+    print(*result[1:])
 else :
     print(0)
