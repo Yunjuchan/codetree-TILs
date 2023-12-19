@@ -32,7 +32,7 @@ def f3(level, N, path) :
 
 if tp == 1 :
     f1(0, N, [])
-elif tp == 1 :
+elif tp == 2 :
     f2(0, N, 1, [])
-elif tp == 1 :
+elif tp == 3 :
     f3(0, N, [])
