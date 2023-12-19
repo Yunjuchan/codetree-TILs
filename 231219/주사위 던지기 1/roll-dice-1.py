@@ -28,6 +28,8 @@ def f3(level, N, path) :
         if visited[i] : continue
         visited[i] = True 
         f3(level+1, N, path+[i])
+        visited[i] = False 
+
 
 
 if tp == 1 :
